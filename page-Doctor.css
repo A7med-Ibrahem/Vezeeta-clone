@@ -207,8 +207,14 @@ body {
   background-color: #e05555;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ==== كارت الدكتور ==== */
 .doctor-card {
+ 
+
   background-color: #fff;
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -788,7 +794,18 @@ body {
       margin: auto;
       padding: 25px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;}
+      border-radius: 10px;
+      position: sticky;
+      top: 0px;  /*المسافة من أعلى الصفحة أو الهيدر */
+       align-self: flex-start; /* عشان يبدأ من فوق */
+    }
+    @media (max-width: 991.98px) {
+  .booking-form {
+    position: static;
+    top: auto;
+  }
+    }
+
 
       .accordion-button {
       background-color: #f8f9fa;
