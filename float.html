@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تم الحجز بنجاح</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+ <link rel="stylesheeet" href="style.css">
+<link rel="stylesheeet" href="bootstrap.css">
+</head>
+<style>
+ * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f7f7f7;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .left, .right {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      flex: 1;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .right .success-icon {
+      font-size: 40px;
+      color: green;
+      text-align: center;
+    }
+
+    .right h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .info-row {
+      margin: 10px 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .info-label {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .info-value {
+      color: #222;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .left{width:500px;}
+   
+    .left label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .left input[type="radio"] {
+      margin-left: 5px;
+    }
+
+    .left select, .left input[type="file"], .left textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .left button {
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+.left{
+width: 1000px;
+}
+
+</style>
+<body>
+
+  <div class="container">
+    
+<!-- 
+     اليمين: بيانات الحجز -->
+
+    <div class="right">
+    <img src="thankyou-banner.jpeg">
+      <div class="info-label">
+      <div class="icons"><img src="icon.png">
+أبلغنا دكتور عمرو الشامي بحجزك</div>
+      <div class="icons"><img src="icon2.png">
+      سعر الكشف: ١٠٠ جنيه</div>
+      <hr>
+      <div class="icons"><img src="icon3.png">قم تليفون العيادة: 01090460873</div>
+      <div class="icons"><img src="icon4.png">تفاصيل الحجز</div>
+      </div>
+     <hr>
+
+      <div class="info-row">
+        <div class="info-label">اسم المريض:</div>
+        <div class="info-value">rfr</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">تاريخ الحجز:</div>
+        <div class="info-value">اليوم، ٥:٠٠ مساءً</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">اسم الدكتور:</div>
+        <div class="info-value">دكتور عمرو الشامي</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">مدة الانتظار:</div>
+        <div class="info-value">١٦ دقيقة</div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">عنوان العيادة:</div>
+        <div class="info-value">
+          شارع بورسعيد، الدور الرابع، شقة ٤٠٣ - روكسي، أعلى بنك الأهلي
+        </div>
+      </div>
+
+      <a href="#" class="btn">مواعيدي</a>
+    </div>
+
+    <!-- الشمال: معلومات إضافية -->
+    <div class="left">
+      <h3>معلومات إضافية للدكتور (اختياري)</h3>
+      <label>السن:</label>
+      <input type="number" placeholder="أدخل السن">
+
+      <label>النوع:</label>
+      <input type="radio" name="gender"> ذكر
+      <input type="radio" name="gender"> أنثى
+
+      <label>الأعراض:</label>
+      <select>
+        <option>اختر الأعراض</option>
+        <option>صداع</option>
+        <option>حمى</option>
+        <option>سعال</option>
+      </select>
+
+      <label>ملفات:</label>
+      <input type="file" multiple>
+
+      <button onclick="alert('تم الإرسال بنجاح!')">أرسل للدكتور</button>
+    </div>
+</div>
+
+
+<script src="bootstrap.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

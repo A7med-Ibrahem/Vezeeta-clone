@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="bootstrap.css">
+
+
+
+
+
+
+
+
+   <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+   
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .form-buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+   .booking-form {
+      background-color: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;}
+
+    .submit-btn {
+      background-color: #e73f3f;
+      color: white;
+    }
+
+    .cancel-btn {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    .note {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    select {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  </style>
+
+
+
+<body>
+
+
+                                 
+           
+                                     <div class="container">
+                                      <div class="booking-form ">
+                                   <div class="text-center">  <div style="background-color: blue;"><p>معلومات الحجز</p></div>
+                                           <a href="#" ><p>احجز</p></a>
+                                            <p style="color: rgb(96, 96, 233);">كشف طبى</p> </div> 
+                                     
+                                     <hr>
+                                     <div style="text-align: center;">
+                                     <div class="row">
+                                      <div class="col-4"><img src="Screenshot.png"></div>
+                                       <div class="col-4"><img src="Screenshot.png2.png"></div>
+                                        <div class="col-4"><img src="secren.png"></div>
+                                     </div></div>
+
+                               <div style="text-align: center;">
+                                     <div class="row">
+                                      <div class="col-4">الكشف٦٠٠ جنيه</div>
+                                       <div class="col-4">ستحصل على 600نقطه</div>
+                                        <div class="col-4">مدة الانتظار : ساعة و ١٠ دقائق</div>
+                                     </div></div><hr>
+                        
+
+
+
+  <div class="booking-form">
+    <h3>ادخل بيانات الحجز</h3>
+
+    <div class="form-group">
+      <label>اسم المريض</label>
+      <input type="text" id="patientName" placeholder="ادخل الاسم">
+    </div>
+
+    <div class="form-group">
+      <label>رقم الموبايل</label>
+      <input type="tel" id="phone" placeholder="ادخل رقم الهاتف">
+    </div>
+
+    <div class="form-group">
+      <label>البريد الإلكتروني (اختياري)</label>
+      <input type="email" id="email" placeholder="example@email.com">
+    </div>
+
+
+    <div class="form-buttons">
+      <button class="cancel-btn" onclick="cancelBooking()">إلغاء</button>
+      <button class="submit-btn" onclick="submitBooking()">احجز</button>
+    </div>
+  </div>
+</div>
+  <script>
+    function submitBooking() {
+      const name = document.getElementById('patientName').value;
+      const phone = document.getElementById('phone').value;
+
+      if (name.trim() === '' || phone.trim() === '') {
+        alert('من فضلك أدخل الاسم ورقم الموبايل.');
+      } else {
+        alert('تم الحجز بنجاح ✅');
+        window.location.href = "float.html";
+      }
+    }
+
+    function cancelBooking() {
+      document.getElementById('patientName').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('email').value = '';
+    }
+  </script>                           
+
+
+
+
+
+</body>
+</html>
+   
