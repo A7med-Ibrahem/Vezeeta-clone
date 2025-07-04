@@ -620,50 +620,160 @@ body {
 }
 
 /* ==== Footer ==== */
-footer {
-  background-color: #f8f9fa;
-  padding: 40px 0;
-  margin-top: 50px;
-  border-top: 1px solid var(--border-color);
+
+/* Footer Styles */
+.footer {
+  background-color: #0070CD;
+  color: white;
+  padding: 50px 0 30px;
+  font-family: 'Cairo', sans-serif;
 }
 
-footer h5 {
-  color: var(--main-color);
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  max-width: 180px;
   margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-title {
+  font-size: 18px;
   font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-footer ul li {
-  margin-bottom: 10px;
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-footer a {
-  color: var(--text-color);
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  font-size: 15px;
 }
 
-footer a:hover {
-  color: var(--main-color);
+.footer-links a:hover {
+  color: white;
+  padding-right: 5px;
+}
+
+.app-download {
+  margin-bottom: 25px;
+}
+
+.app-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-badge {
+  display: block;
+  max-width: 150px;
+}
+
+.app-badge img {
+  width: 100%;
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .social-icons a {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  background-color: var(--main-color);
   color: white;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 36px;
-  margin-left: 10px;
+  font-size: 20px;
   transition: all 0.3s;
 }
 
 .social-icons a:hover {
-  background-color: #005fa3;
   transform: translateY(-3px);
+  opacity: 0.8;
 }
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .footer-content {
+    gap: 20px;
+  }
+  
+  .footer-section {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-section {
+    min-width: 45%;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    min-width: 100%;
+    text-align: center;
+  }
+  
+  .footer-title::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .app-badges {
+    align-items: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
 
 .min-w-33{
           min-width: 33%;
@@ -700,6 +810,7 @@ footer a:hover {
     }
 
     .container  h5{
+      
       font-size: 28px;
     }
 /* ==== التجاوب ==== */

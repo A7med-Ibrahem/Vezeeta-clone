@@ -59,22 +59,3 @@ var titleProject=["p1,p2,p3,p4,p5,p6"]
 
 
 
-for(let i=0;i<=20;i++){
- var container=document.createElement("div");
- var img=document.createElement("img");
- var title=document.createElement("h2");
- var price=document.createElement("h4");
- var btn=document.createElement("button");
-//add value
-img.src="./4.jpg";
-title.innerHTML="product1";
-price.innerHTML="10$";
-btn.innerHTML="add to start";
-img.style.width="300px";
-img.style.height="300px"
-//add to body
-container.appendChild(img);
-container.appendChild(title);
-container.appendChild(price);
-container.appendChild(btn);
-document.body.appendChild(container);}
