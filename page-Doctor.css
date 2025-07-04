@@ -520,7 +520,7 @@ body {
 
 /* ==== كارت التقييمات (Reviews Cards) ==== */
 .review-card {
- 
+  max-width: 1000px;
   background-color: white;
   border: 1px solid var(--border-color);
   padding: 20px;
@@ -620,32 +620,72 @@ body {
 }
 
 /* ==== Footer ==== */
-footer {
-  background-color: #f8f9fa;
-  padding: 40px 0;
-  margin-top: 50px;
-  border-top: 1px solid var(--border-color);
+.footer {
+  background-color: #0070CD;
+  color: white;
+  padding: 20px;
 }
 
-footer h5 {
-  color: var(--main-color);
-  margin-bottom: 20px;
-  font-weight: 700;
+.footer-section {
+  width: 20%;
 }
 
-footer ul li {
-  margin-bottom: 10px;
+.footer-section img {
+  padding: 5px 0;
 }
 
-footer a {
-  color: var(--text-color);
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  text-align: right;
+  padding-left: 0;
+}
+
+.footer-section ul li {
+  margin: 5px;
+}
+
+.footer-section a {
   text-decoration: none;
-  transition: color 0.3s;
+  color: white;
 }
 
-footer a:hover {
-  color: var(--main-color);
+.footer-section a:hover {
+  color: #003366;
 }
+
+.footer-section p {
+  margin: 5px;
+}
+
+.app {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+  float: left;
+}
+
+.icons {
+  font-size: 24px;
+  display: flex;
+  float: left;
+  line-height: 31px;
+}
+
+.icons a {
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
 
 .social-icons a {
   display: inline-block;
@@ -680,28 +720,6 @@ footer a:hover {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       border-radius: 10px;}
 
-      .accordion-button {
-      background-color: #f8f9fa;
-      color: #000;
-      font-weight: bold;
-    }
-    .accordion-button:not(.collapsed) {
-      color: #0d6efd;
-      background-color: #e7f1ff;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .mb-0{
-      gap: 40px;
-      position: relative;
-      padding-bottom: 20px;
-    
-    }
-
-    .container  h5{
-      font-size: 28px;
-    }
 /* ==== التجاوب ==== */
 @media (max-width: 1200px) {
   .doctor-img {

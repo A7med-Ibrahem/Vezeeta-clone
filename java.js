@@ -50,10 +50,7 @@
         this.classList.add('active');
       });
     });
-  </script>
-
-  //CREATE ELEMENTS
-  <script>
+  
 var titleProject=["p1,p2,p3,p4,p5,p6"]
 
 
