@@ -1,0 +1,318 @@
+body {
+      background-color: #f1f3f6;
+      font-family: Arial, sans-serif;
+   
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      padding: 0 60px; /* علشان نسيب مكان للأسهم */
+    }
+
+    .owl-carousel .item {
+      border-radius: 12px;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background-color: #fff;
+    }
+
+    .owl-carousel .item:hover {
+      transform: translateY(-5px);
+    }
+
+    .owl-carousel .item img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+
+    .owl-carousel .item h5 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #5f6f8d;
+  margin: 10px 0;
+  text-align: right;
+  padding-right: 10px;
+}
+
+
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: calc(100% + 120px);
+      left: -60px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    .owl-nav button {
+      background-color: #fff !important;
+      border: 1px solid #ccc !important;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      line-height: 20px;
+      transition: 0.3s ease;
+      pointer-events: all;
+      color: #1b3c6b;
+    }
+
+    .owl-nav button:hover {
+      background-color: #eee !important;
+    }
+    .price {
+      font-size: 16px;
+    }
+
+    .price del {
+      color: #999;
+      margin-right: 10px;
+    }
+
+    .price span {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .offers-count {
+      margin-top: 5px;
+      color: gray;
+      font-size: 14px;
+    }
+
+    .discount {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: red;
+      color: #fff;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    
+    
+
+    a:-webkit-any-link {
+color: rgb(0, 112, 205);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 1050px;
+    position: relative;
+    bottom: 50px;
+}
+    
+    
+
+    h2{
+      font-size: 28px;
+    color: #5f6f8d;
+    padding-right: 60px;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        .section {
+            flex: 1; /* Allows sections to take equal space */
+            min-width: 300px; /* Minimum width before wrapping */
+        }
+
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-end; /* Align tags to the right */
+        }
+
+        .tag-button {
+            background-color: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap; /* Prevent text wrapping within button */
+            text-decoration: none; /* For anchor tags if used */
+            display: inline-block; /* For better spacing and alignment */
+        }
+
+        .tag-button:hover {
+            background-color: #d0d0d0;
+        }
+
+        /* Adjustments for the "عرض المزيد" (Show More) button style if needed */
+        .more-button {
+            background-color: transparent;
+            border: 1px solid #ccc;
+            color: #666;
+        }
+        .more-button:hover {
+             background-color: #f0f0f0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack sections vertically on small screens */
+                gap: 30px;
+            }
+            .section {
+                width: 100%;
+                min-width: unset;
+            }
+        }
+
+
+
+        .book-button{
+          background-color: #EEF0F2;border-color: #ffffff; margin:3px;
+          border-radius: 10px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.text {
+  flex: 1;
+ 
+}
+
+.img {
+  width: 95px;
+
+}
+
+.title {
+  font-size: 17px;
+  margin-bottom: 20px;
+
+}
+.text p{
+  color: gray;
+}
+
+.btn {
+  background-color: #e0efff;
+  color: #0077cc;
+  border: none;
+  padding: 20px 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.btn:hover {
+  background-color: #c9e2f7;
+}
+
+.image img {
+  width: 96x;
+  height: 96px;
+  
+  border-radius:50%;
+}
+.butt{
+    background-color: #e0efff;
+  color: #0077cc;
+  border: none;
+  padding: 20px 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 15px;
+
+}
+
+.textt p{
+  font-size: 16px;
+  padding: 10px;
+  font-family: TheSans !important;
+  color: gray;
+  
+}
+.textt h3{
+   font-family: 'Cairo',sans-serif;
+  color: gray;
+}

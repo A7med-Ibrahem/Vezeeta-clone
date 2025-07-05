@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الهيدر - Vezeeta</title>
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+<!-- jQuery -->
+  <link rel="stylesheet" href="bootstrap.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <!--<link rel="stylesheet" href="stylee.css">-->
+
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- أيقونة المينيو تظهر على الشاشات الصغيرة -->
+        <button class="btn d-md-none text-white" id="menu-toggle">
+          <i class="bi bi-list" style="font-size: 24px;"></i>
+        </button>
+
+        <!-- روابط الناف بار تظهر على الشاشات المتوسطة فأعلى -->
+        <div class="d-none d-md-flex nav-links align-items-center gap-3">
+          <!-- قائمة اختيار الدولة -->
+          <div class="dropdown">
+            <button class="dropdown-toggle btn btn-sm text-white border-0 p-0 d-flex align-items-center"
+                    type="button" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <img id="country-flag" src="https://flagcdn.com/w40/eg.png" alt="مصر" class="flag me-2">
+              مصر
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+              <li><a class="dropdown-item country-option" href="#" data-country="مصر" data-flag="eg">
+                <img src="https://flagcdn.com/w40/eg.png" class="flag me-2"> مصر
+              </a></li>
+              <li><a class="dropdown-item country-option" href="#" data-country="السعودية" data-flag="sa">
+                <img src="https://flagcdn.com/w40/sa.png" class="flag me-2"> السعودية
+              </a></li>
+              <li><a class="dropdown-item country-option" href="#" data-country="الإمارات" data-flag="ae">
+                <img src="https://flagcdn.com/w40/ae.png" class="flag me-2"> الإمارات
+              </a></li>
+            </ul>
+          </div>
+
+          <a href="#">English</a>
+          <a href="#">اتصل بنا</a>
+          <a href="#">فيزيتا للأطباء</a>
+          <a href="#">دخول</a>
+          <button style="color-overline: #ffff" class="join-btn">انضم الآن</button>
+        </div>
+
+        <!-- لوجو الموقع -->
+        <a href="/" class="logo">
+          <img src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/whitelogowithdotcom.png" 
+               alt="فيزيتا" class="main-logo">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side Menu (يظهر في الشاشات الصغيرة) -->
+  <div id="side-menu" class="side-menu">
+    <ul>
+      <li><i class="bi bi-house-door"></i> الصفحة الرئيسية</li>
+      <li><i class="bi bi-person-plus"></i> انضم الآن كمستخدم</li>
+      <li><i class="bi bi-person-badge"></i> فيزيتا للأطباء</li>
+      <li><i class="bi bi-box-arrow-in-right"></i> دخول</li>
+      <li><i class="bi bi-telephone"></i> اتصل بنا</li>
+      <li class="d-flex justify-content-between px-3 mt-3">
+        <span>🇪🇬 مصر</span>
+        <span>English</span>
+      </li>
+    </ul>
+  </div>
+  <!-- ======================================== -->
+   
+
+<!--============================================ -->
+<div class="background-slider">
+    <div class="slide active" style="background-image: url('https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/homecovernewen4-eg.jpg');"></div>
+    <div class="slide" style="background-image: url('https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/homecovernewen3-eg.jpg');"></div>
+    <div class="slide" style="background-image: url('https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/homecovernewen2-eg.jpg');"></div>
+    <div class="slide" style="background-image: url('https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/homecovernewen1-eg.jpg');"></div>
+
+    <div class="hero-content">
+      <div class="tabs mb-3">
+        <button class="active" onclick="switchTab('clinic')"><i class="bi bi-hospital"></i> احجز دكتور</button>
+        <button onclick="switchTab('call')"><i class="bi bi-telephone"></i> مكالمة دكتور</button>
+      </div>
+      <div id="clinic-form" class="form-group-box">
+        <select>
+          <option>اختر التخصص</option>
+          <option>باطنة</option>
+          <option>جلدية</option>
+          <option>أطفال</option>
+          <option>نساء وتوليد</option>
+          <option>مخ وأعصاب</option>
+          <option>جراحة عامة</option>
+          <option>عظام</option>
+          <option>أسنان</option>
+          <option>عيون</option>
+          <option>قلب</option>
+          <option>أورام</option>
+          <option>نفسية</option>
+          <option>صدرية</option>
+          <option>كلى</option>
+          <option>أنف وأذن</option>
+          <option>سكر وغدد</option>
+          <option>تحاليل طبية</option>
+          <option>أشعة</option>
+          <option>روماتيزم</option>
+          <option>جلدية وتجميل</option>
+          <option>علاج طبيعي</option>
+          <option>تخدير</option>
+          <option>جراحة قلب</option>
+          <option>تغذية علاجية</option>
+          <option>نطق وتخاطب</option>
+        </select>
+        <select>
+          <option>اختر المحافظة</option>
+          <option>القاهرة</option>
+          <option>الجيزة</option>
+          <option>الأسكندرية</option>
+          <option>الدقهلية</option>
+          <option>الشرقية</option>
+          <option>الغربية</option>
+          <option>المنوفية</option>
+          <option>البحيرة</option>
+          <option>كفر الشيخ</option>
+          <option>الفيوم</option>
+          <option>بني سويف</option>
+          <option>المنيا</option>
+          <option>أسيوط</option>
+          <option>سوهاج</option>
+          <option>قنا</option>
+          <option>الأقصر</option>
+          <option>أسوان</option>
+          <option>دمياط</option>
+          <option>بورسعيد</option>
+          <option>الإسماعيلية</option>
+          <option>السويس</option>
+          <option>شمال سيناء</option>
+          <option>جنوب سيناء</option>
+          <option>مطروح</option>
+          <option>الوادي الجديد</option>
+          <option>البحر الأحمر</option>
+        </select>
+        <select>
+          <option>كل المناطق</option>
+          <option>أجا</option>
+          <option>بلقاس</option>
+          <option>دكرنس</option>
+          <option>شربين</option>
+          <option>السنبلاوين</option>
+          <option>المنصورة</option>
+          <option>ميت غمر</option>
+        </select>
+        <input type="text" placeholder="👤 ابحث باسم الدكتور أو المستشفى">
+        <button class="btn-search">بحث</button>
+      </div>
+      <div id="call-form" class="form-group-box" style="display: none;">
+        <input type="text" placeholder="💬 ابحث بالتخصص، اسم الدكتور، أو المستشفى">
+        <button class="btn-search">ابحث</button>
+      </div>
+    </div>
+
+    <div class="mobile-tabs">
+      <div class="tabs mb-2">
+        <button class="active" onclick="switchMobile('clinic')"><i class="bi bi-hospital"></i> كشف عيادة</button>
+        <button onclick="switchMobile('medicine')"><i class="bi bi-capsule"></i> اطلب أدوية</button>
+        <button onclick="switchMobile('call')"><i class="bi bi-telephone"></i> مكالمة دكتور</button>
+      </div>
+      <div id="mobile-clinic" class="form-row-mobile">
+        <input type="text" placeholder="👤 ابحث بالتخصص، اسم الدكتور، مكالمة دكتور">
+        <select>
+          <option>كل المناطق</option>
+          <option>أجا</option>
+          <option>بلقاس</option>
+          <option>دكرنس</option>
+          <option>شربين</option>
+          <option>السنبلاوين</option>
+          <option>المنصورة</option>
+          <option>ميت غمر</option>
+        </select>
+      </div>
+      <div id="mobile-medicine" class="form-row-mobile" style="display: none;">
+        <input type="text" placeholder="💊 ابحث عن طلبك">
+      </div>
+      <div id="mobile-call" class="form-row-mobile" style="display: none;">
+        <input type="text" placeholder="📞 ابحث بالتخصص، اسم الدكتور أو المستشفى">
+      </div>
+    </div>
+  </div>
+  
+  <a href="#bottom" class="scroll-down">
+    <i class="fas fa-chevron-down"></i>
+  </a>
+
+  <div class="blue-box">
+    <div class="row-flex">
+      <!-- القسم الأيسر: صورة + نص -->
+      <div class="left-content">
+        <img src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/shamel-logo.png" alt="صورة">
+        <div class="text-content">
+          <p class="title">شامل</p>
+          <p class="subtitle">وفر حتى 80% على جميع الخدمات الطبية.</p>
+        </div>
+      </div>
+
+      <!-- القسم الأيمن: زر -->
+      <div class="button">
+        <button>اضغط هنا</button>
+      </div>
+    </div>
+  </div>
+
+ </div>
+<!-- ===================slider 1========================= -->
+ <div class="container">
+  <div class="TopHospitalstyle">
+    <h2 class="TopHospitalB">المراكز الأكثر اختيارا</h2>
+    <a href="/ar/entities" class="TopHospital">أظهر المزيد</a>
+  </div>
+
+  <div class="slider-wrapper">
+    <div class="owl-carousel owl-theme">
+  
+      <div class="item"> <a href="../page-Doctor.html"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTbd97226acca82783/Profile/150/doctor-amr-elshamy-dentistry_20241027011201994.jpg"></a><h5>المركز 1</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT9dbcc6/Profile/150/doctor-ahmed-taiee-gastroenterology-and-endoscopy-1_20241116004740356.jpg"> <h5>المركز 2</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT3ff1ea/Profile/150/doctor-dr-ahmed-nagi-alghandour-dentistry_20181125140949536.jpg"><h5>المركز 3</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTbb38ba/Profile/150/doctor-doaa-salah-el-din-mahmoud-gynaecology-and-infertility_20250209134835974.jpg"><h5>المركز 4</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTf15f375be28731f0/Profile/150/doctor-maurice-fekry-khalil-plastic-surgery_20240331211136459.jpg"><h5>المركز 5</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT653c62264c784fb5/Profile/150/ismail-ahmed-shafiq-general-surgery_20230416143853591.jpg"><h5>المركز 6</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT770112/Profile/150/doctor-ayman-abo-leila-general-surgery-1_20240912033856572.jpg"><h5>المركز 7</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT628a04/Profile/150/doctor-safwat-abdel-kader-general-surgery_20180801185644035.jpg"><h5>المركز 8</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT72aa3f0d545bb2/Profile/150/doctor-hager-abdeldayem-dietitian-and-nutrition_20250624162339164.jpg"><h5>المركز 9</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT81b205/Profile/150/doctor-mohamed-azmy-dietitian-and-nutrition-1_20240425094510560.jpg"><h5>المركز 10</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT66e96d082e771c64/Profile/150/doctor-mohamed-hatem-vascular-surgery_20241011142436040.jpg"><h5>المركز 11</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT18c418/Profile/150/doctor-talaat-el-samne-ear-nose-and-throat_20250103190755366.jpg"><h5>المركز 12</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT66e96d082e771c64/Profile/150/doctor-mohamed-hatem-vascular-surgery_20241011142436040.jpg"><h5>المركز 13</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT18c418/Profile/150/doctor-talaat-el-samne-ear-nose-and-throat_20250103190755366.jpg"><h5>المركز 14</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT81b205/Profile/150/doctor-mohamed-azmy-dietitian-and-nutrition-1_20240425094510560.jpg"><h5>المركز 15</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT66e96d082e771c64/Profile/150/doctor-mohamed-hatem-vascular-surgery_20241011142436040.jpg"><h5>المركز 16</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT628a04/Profile/150/doctor-safwat-abdel-kader-general-surgery_20180801185644035.jpg"><h5>المركز 17</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT72aa3f0d545bb2/Profile/150/doctor-hager-abdeldayem-dietitian-and-nutrition_20250624162339164.jpg"><h5>المركز 18</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT72aa3f0d545bb2/Profile/150/doctor-hager-abdeldayem-dietitian-and-nutrition_20250624162339164.jpg"><h5>المركز 19</h5></div>
+      <div class="item"><img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT72aa3f0d545bb2/Profile/150/doctor-hager-abdeldayem-dietitian-and-nutrition_20250624162339164.jpg"><h5>المركز 20</h5></div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      rtl: true,
+      loop: true,
+      margin: 15,
+      nav: false,
+      dots: true,
+      slideBy: 4,
+      responsive:{
+        0:{ items:1, slideBy: 1 },
+        576:{ items:2, slideBy: 2 },
+        768:{ items:3, slideBy: 3 },
+        992:{ items:4, slideBy: 4 }
+      }
+    });
+  });
+</script>
+<!-- ===================End slider 1========================= -->
+<!-- =======================================الاسلايدر============================== -->
+ <div class="container" style="width: 1170px;
+margin: auto;">
+  
+    <div class="more">
+  <a href="#">أظهر المزيد <span style="font-size: 16px;">&#8592;</span></a>
+
+
+  </div>
+
+  <h2>المراكز الأكثر اختيارًا</h2>
+
+  <!-- ✅ Owl Carousel container -->
+  <div class="owl-carousel owl-theme">
+
+    <div class="card" data-index="1">
+      <img src="imge/11.png" alt="مركز">
+      <div class="info">
+        <h3>كير أند كيور</h3>
+        <p>٢٥ تخصص</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="2">
+      <img src="imge/44.png" alt="مركز">
+      <div class="info">
+        <h3>أورام عمر الحديثة</h3>
+        <p>١٠ تخصصات</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="3">
+      <img src="imge/33.png" alt="مركز">
+      <div class="info">
+        <h3>د. شيماء محمود</h3>
+        <p>تخصص واحد</p>
+        <p class="location">مدينة نصر</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="4">
+      <img src="imge/55.png" alt="مركز">
+      <div class="info">
+        <h3>مصر الحديثة</h3>
+        <p>٢٩ تخصص</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="5">
+      <img src="imge/66.png" alt="مركز">
+      <div class="info">
+        <h3>كير أند كيور</h3>
+        <p>٢٥ تخصص</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="6">
+      <img src="imge/5.png" alt="مركز">
+      <div class="info">
+        <h3>أورام عمر الحديثة</h3>
+        <p>١٠ تخصصات</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="7">
+      <img src="imge/11.png" alt="مركز">
+      <div class="info">
+        <h3>د. شيماء محمود</h3>
+        <p>تخصص واحد</p>
+        <p class="location">مدينة نصر</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="8">
+      <img src="imge/88.png" alt="مركز">
+      <div class="info">
+        <h3>مصر الحديثة</h3>
+        <p>٢٩ تخصص</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="9">
+      <img src="imge/77.png" alt="مركز">
+      <div class="info">
+        <h3>د. شيماء محمود</h3>
+        <p>تخصص واحد</p>
+        <p class="location">مدينة نصر</p>
+      </div>
+    </div>
+
+    <div class="card" data-index="10">
+      <img src="imge/10.png" alt="مركز">
+      <div class="info">
+        <h3>مصر الحديثة</h3>
+        <p>٢٩ تخصص</p>
+        <p class="location">الدقي والمهندسين</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ========================================================================================== -->
+
+ <div class="container my-5">
+  <div class="north-box d-flex flex-wrap align-items-center justify-content-between rounded shadow-sm px-3 py-3">
+    
+    <!-- الصورة على الشمال -->
+    <div class="north-image d-flex align-items-center">
+      <img src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/mental-health-image.png"
+           alt="cover" class="img-fluid" style="max-height: 100px;">
+    </div>
+
+    <!-- النص واللوجو -->
+    <div class="north-text text-center text-md-start flex-fill px-3">
+      <img src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/mental-health-logo.svg"
+           alt="nourath-logo" class="img-fluid mb-2" style="max-height: 30px;">
+      <p class="mb-0 fw-bold fs-5" style="color: #0070cd;">عيشها براحة مع نورث.</p>
+    </div>
+
+    <!-- الزرار -->
+    <div class="north-button mt-3 mt-md-0">
+      <button style="color: #ffff" class="btn btn-primary px-4 py-2 "style="color: #ffff">اكتشف نورث</button>
+    </div>
+
+  </div>
+</div>
+<!-- ======================================================================== -->
+
+<div class="container my-5">
+  <div class="ask-box d-flex flex-wrap justify-content-between align-items-center p-4 rounded shadow-sm">
+
+    <!-- النص -->
+    <div class="text-content mb-3 mb-md-0">
+      <h4 class="fw-bold mb-2">لديك سؤال طبي؟</h4>
+      <p class="mb-0 text-muted">ارسل سؤالك الطبي واحصل على إجابة من دكتور متخصص</p>
+    </div>
+
+    <!-- الزر -->
+    <div>
+      <button style="color: #ffff" class="btn btn-primary px-4 py-2 fw-bold">اسأل الآن</button>
+    </div>
+
+  </div>
+</div>
+<!-- =======================سلايدر 3==================== -->
+<div class="container my-5">
+  <div class="slider-container">
+    <!-- صيدلية -->
+    <div class="top-section">
+      <div class="text">
+        <h3>صيدلية</h3>
+        <p style="color: #FFFFFF;">اطلب أدويتك و كل اللي تحتاجه من الصيدلية.</p>
+        <button>اطلب الآن</button>
+      </div>
+      <img src="imge/Screenshot.png" alt="صيدلية">
+    </div>
+
+   <div class="bottom-section">
+  <!-- مكالمة دكتور -->
+  <div class="card">
+    <div class="text">
+      <h3>مكالمة دكتور</h3>
+      <p>للمتابعة عبر مكالمة صوتية أو فيديو</p>
+      <a href="#">احجز الآن ◀</a>
+    </div>
+    <img src="imge/desktop.jpg" alt="مكالمة دكتور">
+  </div>
+
+  <!-- زيارة منزلية -->
+  <div class="card">
+    <div class="text">
+      <h3>زيارة منزلية</h3>
+      <p>اختار التخصص، والدكتور هيجيلك البيت.</p>
+      <a href="#">احجز زيارة ◀</a>
+    </div>
+    <img src="imge/desktop (1).jpg" alt="زيارة منزلية">
+  </div>
+</div>
+
+
+  </div>
+  </div>
+<!-- =========================================================== -->
+  <div class="body1">
+<div class="container my-5">
+  <h2 class="text-end mb-4 fw-bold" style="font-size: 28px; color: #5f6f8d; ">اختار من أحسن العروض</h2>
+        <a href="#">كل العروض ◀</a>
+
+
+  <div class="slider-wrapper">
+    <div class="owl-carousel owl-theme">
+      <div class="item ">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.VINF8f0BxTWUV_eAUzUy4gHaE8?pid=Api&P=0&h=220" class="img-fluid" />
+        <div class="discount">خصم 20%</div>
+        <h5>تقشير الوجه</h5>
+        <div class="price">
+            <del>1500 جنيه</del> <span>900 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 5</div>
+      </div>
+      <div class="item ">
+        <img src="https://dentistryweb.net/blog/wp-content/uploads/2023/11/85069f8286276ffc91f2d19bcab4b4c5-6.jpg" class="img-fluid" />
+        <div class="discount">خصم 20%</div>
+        <h5>تقويم معدني</h5>
+        <div class="price">
+            <del>2000 جنيه</del> <span>1600 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 2</div>
+      </div>
+      <div class="item ">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.GwN1t_MB8tJuC2fN2Wtq9QAAAA?pid=Api&P=0&h=220" class="img-fluid" />
+        <div class="discount">خصم 20%</div>
+        <h5>تنظيف البشرة</h5>
+        <div class="price">
+            <del>10000 جنيه</del> <span>8000 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 36</div>
+      </div>
+      <div class="item ">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.yHTlJ4-HJpb0R-827hltBAHaE8?pid=Api&P=0&h=220" class="img-fluid" />
+        <div class="discount">خصم 40%</div>
+        <h5> تنظيف اسنان</h5>
+        <div class="price">
+            <del>2000 جنيه</del> <span>1600 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 93</div>
+      </div>
+      <div class="item ">
+        <img src="http://static.webteb.net/images/content/tbl_articles_article_26598_824d9ea94f0-2bc0-46df-b9ae-fc8e8528807f.jpg" class="img-fluid" />
+        <div class="discount">خصم 50%</div>
+        <h5> ازالة الشعر بالليزر</h5>
+        <div class="price">
+            <del>200 جنيه</del> <span>100 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 26</div>
+      </div>
+      <div class="item ">
+        <img src="https://www.okaz.com.sa/uploads/images/2025/05/20/2527261.jpg" class="img-fluid" />
+        <div class="discount">خصم 35%</div>
+        <h5>انقاص الوزن</h5>
+        <div class="price">
+            <del>1800 جنيه</del> <span>1170 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 33</div>
+      </div>
+      <div class="item ">
+        <img src="https://cdn.prod.website-files.com/639994c60c9babacb07b9955/64be3746622a1dc4ea7b8672_lasik-surgery.webp" class="img-fluid" />
+        <div class="discount">خصم 20%</div>
+        <h5>تصحيح نظر</h5>
+        <div class="price">
+            <del>18000 جنيه</del> <span>14400 جنيه</span>
+          </div>
+          <div class="offers-count">عرض 1</div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ======================================================================================================================= -->
+ 
+<div class="body2">
+<div class="container my-5">
+  
+  <h2 class="text-end mb-4 fw-bold" style="font-size: 28px; color: #5f6f8d;">احجز كشف حسب التخصص</h2>
+
+  <div class="slider-wrapper">
+    <div class="owl-carousel owl-theme">
+      <div class="item ">
+        <img src="imge/جلدية.png" class="img-fluid" />
+        <h5>جلدية</h5>
+      </div>
+      <div class="item ">
+        <img src="اطفال وحديثي الولادة.jpg" class="img-fluid" />
+        <h5>اطفال وحديثي الولادة</h5>
+      </div>
+      <div class="item ">
+        <img src="imge/desktop(11).jpg" class="img-fluid" />
+        <h5>نفسي</h5>
+      </div>
+      <div class="item ">
+        <img src="اسنان.jpg" class="img-fluid" />
+        <h5>اسنان</h5>
+      </div>
+      <div class="item ">
+        <img src="انف واذن وحنجرة.jpg" class="img-fluid" />
+        <h5>انف واذن وحنجرة</h5>
+      </div>
+      <div class="item ">
+        <img src="عظام.jpg" class="img-fluid" />
+        <h5>عظام</h5>
+      </div>
+      <div class="item ">
+        <img src="مخ واعصاب.jpg" class="img-fluid" />
+        <h5>مخ وأعصاب</h5>
+      </div>
+      <div class="item ">
+        <img src="نساء وتوليد.jpg" class="img-fluid" />
+        <h5>نساء وتوليد</h5>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="flash" >
+    <div class="container">
+      <div class="row m-5">
+        <div class="col-3 text-end">
+          <img src="../images/shieled-icon.png">
+          <p>حجز مجاناً، و ادفع في العياد</p>
+          <p style="font-size: small">سعر الكشف على فيزيتا نفس سعر الكشف في العيادة، بدون أي مصاريف إضافية.</p>
+        </div>
+        <div class="col-3 text-end">
+          <img src="../images/date-blue-icon.png">
+          <p>جزك مؤكد مع الدكتور</p>
+          <p style="font-size: small" ;>حجزك مؤكد بمجرد اختيارك من المواعيد المتاحة للدكتور</p>
+        </div>
+        <div class="col-3 text-end">
+          <img src="../images/person-icon.png">
+          <p>تقييمات حقيقية من المرضى</p>
+
+          <p style="font-size: small">تقييمات الدكاترة من مرضى حجزوا على فيزيتا و زاروا الدكتور بالفعل.</p>
+        </div>
+
+        <div class="col-3 text-end">
+          <img src="../images/care-icon.png" />
+          <p>كل احتياجاتك على فيزيتات</p>
+
+
+          <p style="font-size: small">ابحث و احجز كشف مع دكتور في عيادة، مستشفى، زيارة منزلية، أو عبر مكالمة. ممكن كمان
+            تطلب أدوية، أو تحجز خدمة أو عملية بأحسن سعر</p>
+        </div>
+
+
+      </div>
+
+      <div class="row" style="background-color: rgb(40, 114, 252); height: 300px;">
+
+        <div class="col-6"><img
+            src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/dowanloadApp-eg-ar.png"
+            style="width: 200px;margin-top: 20px;
+                                 margin-left:200px;"></div>
+        <div class="col-6 text-light p-5">
+          <h3>حمّل تطبيق فيزيتا</h3>
+          <p>.ابحث ، قارن واحجز استشارات طبية بسهولة مع اكبر شبكة دكاترة
+            فى مصر اطلب أدويتك وهتوصلك خلال 60 دقيقة تتبع خطواتك
+            اليومية واكسب النقاط عند تحقيق الهدف اليومي.</p>
+
+          <div class="row ">
+            <div class="col"><img src="imge/appStrore.jpg"></div>
+            <div class="col"> <img src="imge/googlePlay.jpg"></div>
+            <div class="col"><img src="imge/appGallery.jpg"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+ <!-- ========================================================================================= -->
+  <!-- jQuery -->
+
+<!-- footer-2--عمار -->
+<div class="cont" style="background-color:#EEF0F2; height: 300px; padding-top:70px;">
+  <div class="container">
+        <div class="row">
+        <div class="col-6">
+            <h2>إختار التخصص واحجز كشف دكتور</h2>
+            <div class="book-container">
+                <button class="book-button" style="background-color: #EEF0F2;border-color: #FFFFFF; padding: 10px;">دكتور خدمه</button>
+                <button class="book-button">دكتور اسنان</button>
+                <button class="book-button">دكتور نفسي</button>
+                <button class="book-button">دكتور اطفال وحديثي الولادة</button>
+                <button class="book-button">دكتور مخ وأعصاب</button>
+                <button class="book-button">دكتور عظام</button>
+                <button class="book-button">دكتور نساء وتوليد</button>
+                <button class="book-button">دكتور أنف وأذن وحنجرة</button>
+                <button class="book-button">دكتور قلب وأوعية دموية</button>
+                <button class="book-button more-button">عرض المزيد -</button>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <h2>إختار المحافظة واحجز كشف دكتور</h2>
+            <div class="book-container">
+                <button class="book-button">القاهرة</button>
+                <button class="book-button">الجيزة</button>
+                <button class="book-button">الاسكندرية</button>
+                <button class="book-button">المنوفية</button>
+                <button class="book-button">الغربية</button>
+                <button class="book-button">السويس</button>
+                <button class="book-button">المنيا</button>
+                <button class="book-button">الفيوم</button>
+                <button class="book-button">الدقهلية</button>
+                <button class="book-button">بورسعيد</button>
+                <button class="book-button more-button">عرض المزيد -</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div id="bottom"></div>
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      rtl: true,
+      loop: true,
+      margin: 15,
+      nav: true,
+      dots: false,
+      navText: ["<span>&#x276E;</span>", "<span>&#x276F;</span>"],
+      slideBy: 4,
+      responsive:{
+        0:{ items:1, slideBy: 1 },
+        576:{ items:2, slideBy: 2 },
+        768:{ items:3, slideBy: 3 },
+        992:{ items:4, slideBy: 4 }
+      }
+    });
+  });
+</script>
+
+  <script src="bootstrap.js">
+
+
+
+  </script>
+  <!-- Owl Carousel JS -->
+
+<!-- =======================================الاسلايدر============================== -->
+  <!-- Bootstrap JS (ضروري لعمل القائمة المنسدلة والسيد منيو) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="script.js"></script>
+ 
+  <!--- FOOTER----------------->
+      <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <img src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/whitelogowithdotcom.png" alt="vezeeta-logo" itemprop="logo" class="NewFooterstyle__Logo-sc-1i9l432-11 hLPEge">
+                <ul>
+                      <li><a href="*">من نحن </a></li>
+                    <li><a href="*">فريق فيزيتا</a></li>
+                    <li><a href="*">وظائف</a></li>
+                    <li><a href="*">الصحافه</a></li> 
+                </ul>
+                   </div>
+                   <div class="footer-section">
+                <h3>ابحث عن طريق</h3>
+                <ul>
+                    <li><a href="*">التخصص</a></li>
+                    <li><a href="*">المنطقه</a></li>
+                    <li><a href="*">التأمين</a></li>
+                    <li><a href="*">المستشفي</a></li>
+                    <li><a href="*">المركز</a></li>
+                </ul>
+         </div>
+            <div class="footer-section">
+                <h3>هل أنت طبيب</h3>
+                <p><a href="*">أنضم الي اطباء فيزيتا</a></p>
+
+            </div>
+            <div class="footer-section">
+                <h3>تحتاج الي مساعده؟</h3>
+                <ul>
+                    <li><a href="*"> مكتبه طبيه</a></li>
+                    <li><a href="*"> اتصل بنا </a></li>
+                    <li><a href="*"> شروط الاستخدام</a></li>
+                    <li><a href="*"> اتفاقيه الخصوصيه</a></li>
+                    <li><a href="*"> اتفاقيه الخصوصيه للاطباء</a></li>
+                    
+                </ul>
+
+            </div>
+            <!-- social -->
+             <div class="footer-section">
+                <div class="app">
+                    <a href="*"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" width="100px"  alt="App Store"></a>
+                    
+                    <br>
+ <a href="*"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" width="100px" alt="Google Play" ></a>
+                </div>
+                <div class="icons">
+                    <a href="*"><i class="bi bi-twitter-x"></i></a>
+                    <a href="*"> <i class="bi bi-instagram"></i></a>
+                    <a href="*"><i class="bi bi-facebook"></i> </a>
+                    
+                </div>
+             </div>
+
+        </div>
+    </footer>
+      <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</html>
