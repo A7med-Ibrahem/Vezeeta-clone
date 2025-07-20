@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حجز دكتور عمرو الشامي - فيزيتا</title>
+
+    <!-- Bootstrap RTL -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="page-Doctor.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS styles from previous code */
+      /* ... (أدخل هنا كود CSS السابق كاملاً) ... */
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div id="overlay" class="overlay"></div>
+
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <button class="btn d-md-none text-white" id="menu-toggle">
+            <i class="bi bi-list" style="font-size: 24px"></i>
+          </button>
+
+          <div class="d-none d-md-flex nav-links align-items-center gap-3">
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle btn btn-sm text-white border-0 p-0 d-flex align-items-center"
+                type="button"
+                id="countryDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  id="country-flag"
+                  src="https://flagcdn.com/w40/eg.png"
+                  alt="مصر"
+                  class="flag me-2"
+                />
+                مصر
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+                <li>
+                  <a
+                    class="dropdown-item country-option"
+                    href="#"
+                    data-country="مصر"
+                    data-flag="eg"
+                  >
+                    <img
+                      src="https://flagcdn.com/w40/eg.png"
+                      alt="مصر"
+                      class="flag me-2"
+                    />
+                    مصر
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item country-option"
+                    href="#"
+                    data-country="السعودية"
+                    data-flag="sa"
+                  >
+                    <img
+                      src="https://flagcdn.com/w40/sa.png"
+                      alt="السعودية"
+                      class="flag me-2"
+                    />
+                    السعودية
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item country-option"
+                    href="#"
+                    data-country="الإمارات"
+                    data-flag="ae"
+                  >
+                    <img
+                      src="https://flagcdn.com/w40/ae.png"
+                      alt="الإمارات"
+                      class="flag me-2"
+                    />
+                    الإمارات
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#">English</a>
+            <a href="#">اتصل بنا</a>
+            <a href="#">فيزيتا للأطباء</a>
+            <a href="#">دخول</a>
+            <button class="join-btn">انضم الآن</button>
+          </div>
+
+          <a href="/" class="logo">
+            <img
+              src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/whitelogowithdotcom.png"
+              alt="فيزيتا"
+              class="main-logo"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Side Menu -->
+    <div id="side-menu" class="side-menu">
+      <ul>
+        <li><i class="bi bi-house-door"></i> الصفحة الرئيسية</li>
+        <li><i class="bi bi-person-plus"></i> انضم الآن كمستخدم</li>
+        <li><i class="bi bi-person-badge"></i> فيزيتا للأطباء</li>
+        <li><i class="bi bi-box-arrow-in-right"></i> دخول</li>
+        <li><i class="bi bi-telephone"></i> اتصل بنا</li>
+        <li class="d-flex justify-content-between px-3 mt-3">
+          <span>🇪🇬 مصر</span>
+          <span>English</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-text text-right">
+          <h2>احجز الآن مع دكتور عمرو الشامي</h2>
+          <p>احجز اونلاين او كلم <span class="call-number">١٦٦٧٦</span></p>
+          <p>١٥٠٠٠ دكتور - ٩٠٠٠ استاذ واستشاري - اكثر من ٤٠ تخصص</p>
+        </div>
+        <form class="hero-form row g-2">
+          <div class="col-md">
+            <select class="form-control">
+              <option disabled selected>اختر التخصص</option>
+              <option>باطنة</option>
+              <option>جلدية</option>
+              <option>نساء وتوليد</option>
+              <option>أسنان</option>
+              <option>مخ وأعصاب</option>
+              <option>قلب</option>
+              <option>أنف وأذن</option>
+              <option>أطفال</option>
+              <option>رمد</option>
+              <option>جراحة عامة</option>
+              <option>عظام</option>
+              <option>صدر</option>
+              <option>كلى</option>
+              <option>مسالك بولية</option>
+              <option>تغذية علاجية</option>
+              <option>أورام</option>
+              <option>نفسية</option>
+              <option>علاج طبيعي</option>
+              <option>طب الأسرة</option>
+              <option>سمعيات</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <select class="form-control">
+              <option disabled selected>اختر المحافظة</option>
+              <option>القاهرة</option>
+              <option>الجيزة</option>
+              <option>الإسكندرية</option>
+              <option>الدقهلية</option>
+              <option>الشرقية</option>
+              <option>المنوفية</option>
+              <option>أسيوط</option>
+              <option>سوهاج</option>
+              <option>بورسعيد</option>
+              <option>دمياط</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="اختر المنطقة"
+            />
+          </div>
+          <div class="col-md">
+            <select class="form-control">
+              <option disabled selected>اختر التأمين</option>
+              <option>التأمين الصحي المصري</option>
+              <option>ميديكال سيرف</option>
+              <option>بوبا</option>
+              <option>أليانز</option>
+              <option>المتحدة</option>
+              <option>جلوب ميد</option>
+              <option>رويال</option>
+              <option>AXA</option>
+              <option>عناية</option>
+              <option>الوطنية</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="الدكتور أو المستشفى"
+            />
+          </div>
+          <div class="col-md-auto">
+            <button
+              type="submit"
+              class="btn btn-danger px-4"
+              style="border-radius: 8px"
+            >
+              ابحث
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+      <div class="row">
+        <!-- Doctor Column -->
+        <div class="col-lg-5">
+          <!-- Doctor Card -->
+          <div class="doctor-card">
+            <div class="doctor-header d-flex">
+              <img
+                src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTbd97226acca82783/Profile/150/doctor-amr-elshamy-dentistry_20241027011201994.jpg"
+                alt="دكتور عمرو الشامي"
+                class="doctor-img"
+              />
+              <div class="doctor-info me-3">
+                <h1 class="doctor-name">دكتور عمرو الشامي</h1>
+                <p class="doctor-specialty">اخصائي زراعة الاسنان والتركيبات</p>
+                <p class="doctor-description">
+                  دكتور اسنان متخصص في
+                  <span class="specialties"
+                    >تجميل اسنان، تركيبات اسنان، زراعة اسنان</span
+                  >
+                  <span
+                    class="specialties more-specialties"
+                    style="display: none"
+                    >، حشو وعلاج الجذور والاعصاب، تقويم اسنان</span
+                  >
+                  <br />
+                  <a href="#" class="show-more" onclick="toggleSpecialties()"
+                    >المزيد...</a
+                  >
+                </p>
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="review-count">
+                  التقييم العام من ٨ زاروا الدكتور |
+                  <a href="#" class="show-reviews">أظهر التقييمات</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="review-box">
+              <p class="review-text">"الدكتور شاطر جدا ومحترف في عمله"</p>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="review-author">أحمد م. – الأحد، ٢٩ سبتمبر ٢٠٢٤</p>
+            </div>
+
+            <div class="badge-item">
+              <img
+                src="https://cdn-dr-images.vezeeta.com/Specialties/Audiology.png"
+                alt="مستمع جيد"
+              />
+              مستمع جيد
+            </div>
+          </div>
+
+          <!-- Doctor Information Section -->
+          <div class="doctor-card mt-3">
+            <h2 class="section-title">
+              <i class="bi bi-info-circle"></i>
+              معلومات عن الدكتور
+            </h2>
+            <p class="doctor-description">
+              أخصائي زراعة الاسنان والتركيبات التجميلية بمهارة عالية ودقة
+              متناهية. حاصل على ماجستير زراعة الأسنان من جامعة القاهرة وعضو
+              الجمعية الدولية لزراعة الأسنان.
+            </p>
+          </div>
+
+          <!-- Services Section -->
+          <div class="doctor-card mt-3">
+            <h2 class="section-title">
+              <i class="bi bi-list-check"></i>
+              الأعراض و الخدمات
+            </h2>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="time-slot">نزيف اللثة</span>
+              <span class="time-slot">التهاب اللثة</span>
+              <span class="time-slot">جير الأسنان</span>
+              <span class="time-slot">زراعة اسنان</span>
+              <span class="time-slot">فراغ بين الاسنان</span>
+            </div>
+          </div>
+
+          <!-- Clinic Section -->
+          <div class="clinic-section">
+            <h2 class="section-title">
+              <i class="bi bi-building"></i>
+              العيادة
+            </h2>
+
+            <div class="clinic-images">
+              <img
+                src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTbd97226acca82783/Facilities/doctor-amr-elshamy-dentistry_20240902214651963.png"
+                alt="العيادة"
+                class="clinic-img"
+              />
+              <img
+                src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTbd97226acca82783/Facilities/doctor-amr-elshamy-dentistry_20240902214706814.jpg"
+                alt="العيادة"
+                class="clinic-img"
+              />
+              <img
+                src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTbd97226acca82783/Facilities/doctor-amr-elshamy-dentistry_20240906063505471.jpg"
+                alt="العيادة"
+                class="clinic-img"
+              />
+            </div>
+
+            <div class="clinic-features">
+              <div class="feature-badge">
+                <i class="bi bi-elevator"></i>
+                يوجد مصعد / دور أرضي
+              </div>
+              <div class="feature-badge">
+                <i class="bi bi-cpu"></i>
+                أجهزة حديثة
+              </div>
+              <div class="feature-badge">
+                <i class="bi bi-people"></i>
+                صالة انتظار مريحة
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Column -->
+        <div class="col-lg-7">
+          <!-- Booking Section -->
+          <div class="booking-section">
+            <div class="booking-header">
+              <h3 class="booking-title">معلومات الحجز</h3>
+              <p class="booking-type">كشف طبى</p>
+            </div>
+
+            <div class="booking-features">
+              <div class="feature-item">
+                <i class="bi bi-cash-coin feature-icon"></i>
+                <p class="feature-text">الكشف ٦٠٠ جنيه</p>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-award feature-icon"></i>
+                <p class="feature-text">ستحصل على 600 نقطة</p>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-clock feature-icon"></i>
+                <p class="feature-text">مدة الانتظار: ساعة و١٠ دقائق</p>
+              </div>
+            </div>
+
+            <div class="booking-address">
+              الدقي والمهندسين: شارع جمال سالم - متفرع من شارع مصدق.<br />
+              حجز الآن وسيتم إرسال تفاصيل العنوان بالكامل ورقم العيادة.
+            </div>
+
+            <div class="time-slots">
+              <h4 class="text-center mb-4">اخـتــــــــار ميعاد الــحــجــز</h4>
+
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <p class="time-slot-day text-center">اليوم</p>
+                  <div class="text-center">
+                    <span class="time-slot">3:00 م</span>
+                    <span class="time-slot">3:30 م</span>
+                    <span class="time-slot">4:00 م</span>
+                    <span class="time-slot">4:30 م</span>
+                    <span class="time-slot">5:00 م</span>
+                    <span class="time-slot">5:30 م</span>
+                    <a href="regsteration-page.html"
+                      ><button class="book-btn">سجل</button></a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <p class="time-slot-day text-center">غداً</p>
+                  <div class="text-center">
+                    <span class="time-slot">3:00 م</span>
+                    <span class="time-slot">3:30 م</span>
+                    <span class="time-slot">4:00 م</span>
+                    <span class="time-slot">4:30 م</span>
+                    <span class="time-slot">5:00 م</span>
+                    <span class="time-slot">5:30 م</span>
+                    <a href="regsteration-page.html"
+                      ><button class="book-btn">سجل</button></a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <p class="time-slot-day text-center">الأربعاء</p>
+                  <div class="text-center">
+                    <span class="time-slot">3:00 م</span>
+                    <span class="time-slot">3:30 م</span>
+                    <span class="time-slot">4:00 م</span>
+                    <span class="time-slot">4:30 م</span>
+                    <span class="time-slot">5:00 م</span>
+                    <span class="time-slot">5:30 م</span>
+                    <a href="regsteration-page.html"
+                      ><button class="book-btn">سجل</button></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-address text-center py-3">
+              الحجز مسبقاً والدخول بأسبقية الحضور
+            </div>
+
+            <div
+              class="d-flex align-items-center justify-content-between p-3"
+              style="background-color: #f9f9f9; border-radius: 0 0 12px 12px"
+            >
+              <div>
+                <p class="mb-1 fw-bold">احجز أونلاين، ادفع في العيادة!</p>
+                <p class="mb-0 small text-muted">الدكتور يشترط الحجز المسبق!</p>
+              </div>
+              <i
+                class="bi bi-calendar-check fs-1"
+                style="color: var(--main-color)"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Reviews Section -->
+          <div id="reviews-section" class="mt-4">
+            <h2 class="section-title">
+              <i class="bi bi-star-fill"></i>
+              تقييمات المرضى
+            </h2>
+
+            <!-- التقييم 1 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="stars">★★★★★</div>
+                <div class="review-title">التقييم العام</div>
+                <div class="review-text">
+                  دكتور شاطر وذوق جداً، المعاملة محترمة جداً جداً.
+                </div>
+                <div class="review-footer">
+                  <span>ديالا ك.</span>
+                  <span>الأربعاء، 18 يونيو 2025</span>
+                </div>
+              </div>
+              <div class="rating-box">
+                5
+                <span>تقييم الدكتور</span>
+              </div>
+            </div>
+
+            <!-- التقييم 2 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="stars">★★★★★</div>
+                <div class="review-title">التقييم العام</div>
+                <div class="review-text">
+                  دكتور شاطر ويشرح كل خطوة وعيادة نظيفة جداً.
+                </div>
+                <div class="review-footer">
+                  <span>Eslaam A.</span>
+                  <span>الأحد، 16 يونيو 2025</span>
+                </div>
+              </div>
+              <div class="rating-box">
+                5
+                <span>تقييم الدكتور</span>
+              </div>
+            </div>
+
+            <!-- التقييم 3 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="stars">★★★★★</div>
+                <div class="review-title">التقييم العام</div>
+                <div class="review-text">
+                  دكتور محترف جداً والخدمة ممتازة جداً.
+                </div>
+                <div class="review-footer">
+                  <span>زائر ز</span>
+                  <span>12 يونيو 2025</span>
+                </div>
+              </div>
+              <div class="rating-box">
+                5
+                <span>تقييم الدكتور</span>
+              </div>
+            </div>
+
+            <!-- التقييم 4 -->
+            <div class="review-card hidden">
+              <div class="review-content">
+                <div class="stars">★★★★★</div>
+                <div class="review-title">التقييم العام</div>
+                <div class="review-text">
+                  العيادة مريحة والتعامل محترم جداً.
+                </div>
+                <div class="review-footer">
+                  <span>Amina A.</span>
+                  <span>24 مايو 2025</span>
+                </div>
+              </div>
+              <div class="rating-box">
+                5
+                <span>تقييم الدكتور</span>
+              </div>
+            </div>
+
+            <!-- التقييم 5 -->
+            <div class="review-card hidden">
+              <div class="review-content">
+                <div class="stars">★★★★★</div>
+                <div class="review-title">التقييم العام</div>
+                <div class="review-text">المكان نظيف والدكتور مستمع كويس.</div>
+                <div class="review-footer">
+                  <span>مريم ا</span>
+                  <span>9 مايو 2025</span>
+                </div>
+              </div>
+              <div class="rating-box">
+                5
+                <span>تقييم الدكتور</span>
+              </div>
+            </div>
+
+            <!-- المزيد -->
+            <div class="more" onclick="showMoreReviews()">عرض المزيد</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ============================================================================= -->
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer-section">
+          <img
+            src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-18/images/whitelogowithdotcom.png"
+            alt="vezeeta-logo"
+            itemprop="logo"
+            class="NewFooterstyle__Logo-sc-1i9l432-11 hLPEge"
+          />
+          <ul>
+            <li><a href="*">من نحن </a></li>
+            <li><a href="*">فريق فيزيتا</a></li>
+            <li><a href="*">وظائف</a></li>
+            <li><a href="*">الصحافه</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>ابحث عن طريق</h3>
+          <ul>
+            <li><a href="*">التخصص</a></li>
+            <li><a href="*">المنطقه</a></li>
+            <li><a href="*">التأمين</a></li>
+            <li><a href="*">المستشفي</a></li>
+            <li><a href="*">المركز</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>هل أنت طبيب؟</h3>
+          <p><a href="*">أنضم الي اطباء فيزيتا</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>تحتاج الي مساعده؟</h3>
+          <ul>
+            <li><a href="*"> مكتبه طبيه</a></li>
+            <li><a href="*"> اتصل بنا </a></li>
+            <li><a href="*"> شروط الاستخدام</a></li>
+            <li><a href="*"> اتفاقيه الخصوصيه</a></li>
+            <li><a href="*"> اتفاقيه الخصوصيه للاطباء</a></li>
+          </ul>
+        </div>
+        <!-- social -->
+        <div class="footer-section">
+          <div class="app">
+            <a href="*">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                width="100px"
+                alt="App Store"
+            /></a>
+
+            <br />
+            <a href="*"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                width="100px"
+                alt="Google Play"
+            /></a>
+          </div>
+          <div class="icons">
+            <a href="*"><i class="bi bi-twitter-x"></i></a>
+            <a href="*"> <i class="bi bi-instagram"></i></a>
+            <a href="*"><i class="bi bi-facebook"></i> </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const sideMenu = document.getElementById("side-menu");
+      const overlay = document.getElementById("overlay");
+
+      // لما تضغط على زر المينيو
+      menuToggle.addEventListener("click", function () {
+        sideMenu.classList.toggle("open");
+        overlay.classList.toggle("show");
+      });
+
+      // لما تضغط على الأوفرلاي يقفل المينيو
+      overlay.addEventListener("click", function () {
+        sideMenu.classList.remove("open");
+        overlay.classList.remove("show");
+      });
+
+      // // Side Menu Toggle
+      // document.getElementById('menu-toggle').addEventListener('click', function() {
+      //   document.getElementById('side-menu').classList.toggle('open');
+      // });
+
+      // Country Dropdown
+      const countryOptions = document.querySelectorAll(".country-option");
+      countryOptions.forEach((option) => {
+        option.addEventListener("click", function (e) {
+          e.preventDefault();
+          const country = this.getAttribute("data-country");
+          const flag = this.getAttribute("data-flag");
+          document.getElementById(
+            "country-flag"
+          ).src = `https://flagcdn.com/w40/${flag}.png`;
+          document.querySelector(".dropdown-toggle").innerHTML = `
+          <img id="country-flag" src="https://flagcdn.com/w40/${flag}.png" alt="${country}" class="flag me-2">
+          ${country}
+        `;
+        });
+      });
+
+      // Toggle Specialties
+      function toggleSpecialties() {
+        event.preventDefault();
+        const moreSpecialties = document.querySelector(".more-specialties");
+        const showMoreLink = document.querySelector(".show-more");
+
+        if (moreSpecialties.style.display === "none") {
+          moreSpecialties.style.display = "inline";
+          showMoreLink.textContent = "إخفاء";
+        } else {
+          moreSpecialties.style.display = "none";
+          showMoreLink.textContent = "المزيد...";
+        }
+      }
+
+      // Show More Reviews
+      function showMoreReviews() {
+        const hiddenReviews = document.querySelectorAll(".review-card.hidden");
+        hiddenReviews.forEach((card) => {
+          card.style.display = "flex";
+        });
+        document.querySelector(".more").style.display = "none";
+      }
+
+      // Time Slot Selection
+      const timeSlots = document.querySelectorAll(".time-slot");
+      timeSlots.forEach((slot) => {
+        slot.addEventListener("click", function () {
+          timeSlots.forEach((s) => s.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

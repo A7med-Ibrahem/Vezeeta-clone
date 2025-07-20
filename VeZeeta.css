@@ -1,0 +1,1132 @@
+:root {
+  --main-color: #0070CD;          /* اللون الرئيسي */
+  --secondary-color: #f5f5f5;     /* لون ثانوي فاتح */
+  --accent-color: #ff6b6b;        /* لون تمييز */
+  --text-color: #333;             /* لون النص الأساسي */
+  --light-text: #777;             /* لون نص فاتح */
+  --border-color: #ddd;           /* لون الحدود */
+  --shadow-color: rgba(0,0,0,0.1); /* لون الظلال */
+}
+/* Reset بعض العناصر */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* نخلي كل حاجة داخل نفس الـ container */
+.container {
+  max-width: 1140px; /* زي Vezeeta */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+/* تهيئة أساسية للصفحة */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+  overflow-x: hidden;
+  
+}
+
+/* ==== الهيدر ==== */
+
+/* Header */
+.header {
+  background-color: var(--main-color);
+  padding: 15px 0;
+  color: white;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  position: relative;
+  z-index: 1000;
+}
+
+.main-logo {
+  height: 40px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* خارج الشاشة */
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: right 0.3s ease-in-out;
+  padding: 20px 15px;
+  direction: rtl;
+}
+
+.side-menu.open {
+  right: 0; /* لما يتفتح */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  padding: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.side-menu li i {
+  margin-left: 8px;
+}
+
+/* الزر الخاص بالقائمة */
+#menu-toggle {
+  background: none;
+  border: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* شفاف */
+  z-index: 999; /* أقل من side-menu */
+  display: none;
+}
+
+/* لما يفتح السايد منيو */
+.overlay.show {
+  display: block;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .side-menu {
+    display: none !important;
+  }
+}
+
+
+/* Dropdown styles */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  font-size: 14px;
+}
+
+.dropdown-toggle::after {
+  margin-right: 0.5em;
+  margin-left: 0;
+}
+
+.dropdown-menu {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  min-width: 180px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+
+.join-btn {
+  background-color: white;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.join-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* ==== القائمة الجانبية (Side Menu) ==== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px 0;
+  transition: right 0.3s ease;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  padding: 15px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.side-menu ul li:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.side-menu ul li i {
+  font-size: 18px;
+}
+/* Start Hero Section */
+.background-slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.tabs {
+  display: flex;
+  background: #e8f1f9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  background: #e8f1f9;
+  color: #005aa3;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tabs button:hover {
+  background: #cde3f9;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+  transform: scale(1.03);
+}
+
+.form-group-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-group-box select,
+.form-group-box input {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn-search {
+  background: red;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.mobile-tabs {
+  display: none;
+    
+}
+
+/*=================== End Hero Section ======================*/
+/* ================== Blue Box Section شامل================== */
+.blue-box {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 18px;
+  margin: 50px auto;
+}
+
+.row-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.left-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.text-content {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.text-content .title {
+  font-size: 28px;
+  margin: 0;
+}
+
+.text-content .subtitle {
+  font-size: 16px;
+  margin: 2px 0 0 0;
+}
+
+.button button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 20px 100px;
+  margin-left: 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: large;
+  
+}
+/* ================== End Blue Box Section شامل================ */
+/* start slider 1 */
+.doctor-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.doctor-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+}
+
+.doctor-card h5 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #0070cd;
+}
+
+.doctor-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e60023;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+/* أزرار التقليب */
+.slider-wrapper {
+  position: relative;
+}
+
+.custom-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* شفافية */
+  border: 1px solid #0070cd;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-nav:hover {
+  background-color: #0070cd;
+}
+
+.custom-nav:hover svg {
+  stroke: #fff;
+}
+
+.prev-btn {
+  left: -52px;
+}
+
+.next-btn {
+  right: -52px;
+}
+
+
+/* اطباء مقترحون لك */
+.section-title {
+  margin-bottom: 15px;
+  padding-right: 10px;
+}
+
+.section-title h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  border-right: 4px solid #0070cd;
+  padding-right: 10px;
+  display: inline-block;
+}
+/* ============== */
+/* end slider 1============= */
+/* mobile tabs */
+button, input, optgroup, select, textarea {
+    width: 100%;
+    margin: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+/* ================ */
+.see-more-link {
+  color: #0070CD;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+}
+/* ============Start Slider 2======= */
+/* تنسيق النقاط أسفل السلايدر */
+.centers-carousel .owl-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.centers-carousel .owl-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 140px;
+}
+/* ============End Slider 2=========== */
+/* ============Start North ============*/
+.north-box {
+  border-radius: 16px;
+  background-color: #ffff;
+}
+
+.north-box img {
+  max-height: 100px;
+}
+
+.north-title {
+  color: #0070cd;
+}
+
+.north-btn {
+  background-color: #0070cd;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.north-btn:hover {
+  background-color: #005da5;
+}
+.section-header {
+  background-color: #EEF0F2; /* أبيض للهيدر */
+  width: 100%;
+}
+/* ====== End North ======== */
+/* ===== You have a medical question ===== */
+/* خلفية ممتدة بعرض الصفحة بالكامل */
+.full-width-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* ستايل لقسم اسأل دكتور */
+.ask-section {
+  background-color: #f5f9fd; /* خلفية خفيفة */
+}
+
+.ask-box {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px  !important;
+ 
+}
+
+/* تحسين شكل الزر */
+.ask-box .btn {
+  background-color: #0070cd;
+  border: none;
+}
+
+.ask-box .btn:hover {
+  background-color: #005fa3;
+}
+
+
+/* ==== End You have a medical question ======= */
+/* ============ pharmacy ============== */
+/* قسم كامل */
+.service-slider {
+  background-color: #f5f9fd;
+}
+
+/* القسم العلوي - صيدلية */
+.top-section {
+  background-color: #0070cd;
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.top-section .text {
+  color: white;
+  max-width: 500px;
+}
+
+.top-section .text h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.top-section button {
+  background-color: #ffffff;
+  color: #0070cd;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.top-section img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* الكروت السفلية */
+.bottom-section {
+  gap: 20px;
+}
+
+.card-box {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  flex: 1 1 calc(50% - 10px);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.card-box:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-box .text h3 {
+  color: #0070cd;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-box .text p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-box a {
+  color: #0070cd;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-box img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+/* =================== End pharmacy ============== */
+/* ==================== Start Slider 3 ==================*/
+.offers-section {
+  background-color: #fff;
+}
+
+.text-section-title {
+  font-size: 28px;
+  color: #5f6f8d;
+}
+
+.view-all-link {
+  color: #0070cd;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.offer-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.offer-card img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.discount-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4d4f;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.offer-title {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.offer-price {
+  color: #0070cd;
+  font-size: 16px;
+}
+
+.offer-price del {
+  color: #999;
+  margin-left: 8px;
+}
+
+.offer-count {
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.offer-btn {
+  margin-top: 10px;
+  background: #0070cd;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.offer-btn:hover {
+  background: #005ca5;
+  cursor: pointer;
+}
+
+
+/* ======================End Slider 3====================== */
+
+
+/* ===================== start Slider 4=================== */
+.slider-wrapper {
+      position: relative;
+      padding: 0 60px; /* علشان نسيب مكان للأسهم */
+    }
+
+    .owl-carousel .item {
+      border-radius: 12px;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background-color: #fff;
+    }
+
+    .owl-carousel .item:hover {
+      transform: translateY(-5px);
+    }
+
+    .owl-carousel .item img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+
+    .owl-carousel .item h5 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #5f6f8d;
+  margin: 10px 0;
+  text-align: right;
+  padding-right: 10px;
+}
+
+
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: calc(100% + 120px);
+      left: -60px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    .owl-nav button {
+      background-color: #fff !important;
+      border: 1px solid #ccc !important;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      line-height: 20px;
+      transition: 0.3s ease;
+      pointer-events: all;
+      color: #1b3c6b;
+    }
+
+    .owl-nav button:hover {
+      background-color: #eee !important;
+    }
+/* =====================End Slider 4====================== */
+/* ====================== exstension ================= */
+.row.text-center .col-md-3 {
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.row.text-center .col-md-3:hover {
+  background-color: #f2f6fd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.row.text-center img {
+  display: block;
+  margin: 0 auto;
+}
+.section-extension {
+  background-color: #ffff;
+  padding: 5px 0;
+}
+/* ===================== End extension ================ */
+.popular-links-section {
+  background-color: #eef0f2;
+  padding: 60px 0;
+}
+
+.popular-links-wrapper {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  direction: rtl;
+  gap: 20px;
+}
+
+.popular-col {
+  width: 100%;
+  max-width: 48%;
+}
+
+.popular-col-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #1a2c47;
+}
+
+.popular-col a {
+  display: inline-block;
+  background: #fff;
+  padding: 6px 10px;
+  margin: 5px 5px 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #007bff;
+  transition: background-color 0.2s ease;
+}
+
+.popular-col a:hover {
+  background-color: #f0f4fa;
+}
+ 
+/* download Vezeeta app */
+.download-app {
+  background-color: #0070CD;
+}
+
+
+/*  End download Vezeeta app */
+
+/* Start Footer============ */
+.footer {
+  background-color: #0070CD;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.footer-section img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  max-width: 100%;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section a:hover {
+  color: #003366;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app img {
+  width: 120px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.icons a {
+  color: white;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #003366;
+}
+
+/* End Footer============== */
+
+
+
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #0070CD;
+  margin-top: 40px;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.scroll-down:hover {
+  color: #0056b3;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  } 
+  40% {
+    transform: translateY(8px);
+  } 
+  60% {
+    transform: translateY(4px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* استجابة الموبايل */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-section img {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+  }
+
+  .card-box {
+    flex: 1 1 100%;
+  }
+
+  .card-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-box img {
+    margin-top: 15px;
+  }
+}
+
+/* ==============End pharmacy======== */
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================= responsive================== */
+@media (max-width: 768px) {
+  .hero-content {
+    display: none;
+  }
+  
+  .mobile-tabs {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 95%;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    
+  }
+  
+  .mobile-tabs .tabs {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    gap: 10px;
+    
+  }
+  
+  .mobile-tabs .tabs button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .mobile-tabs .tabs button:hover {
+    background: #d9e7f6;
+  }
+}
+    @media (max-width: 768px) {
+      .north-box {
+        text-align: center;
+        flex-direction: column;
+      }
+    
+      .north-button {
+        margin-top: 15px;
+      }
+    }
