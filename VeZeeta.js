@@ -1,4 +1,4 @@
- // === قائمة الموبايل ===
+// === قائمة الموبايل ===
 const menuToggle = document.getElementById("menu-toggle");
 const sideMenu = document.getElementById("side-menu");
 const overlay = document.getElementById("overlay");
@@ -14,7 +14,7 @@ overlay.addEventListener("click", () => {
 });
 
 // === تغيير الدولة والعلم ===
-document.querySelectorAll(".country-option").forEach(item => {
+document.querySelectorAll(".country-option").forEach((item) => {
   item.addEventListener("click", function (e) {
     e.preventDefault();
     const selectedCountry = this.getAttribute("data-country");
@@ -29,7 +29,6 @@ document.querySelectorAll(".country-option").forEach(item => {
 
 // =============================================
 
-
 // السلايدر التلقائي (تغيير الصور كل 3 ثواني)
 const slides = document.querySelectorAll(".slide");
 let current = 0;
@@ -41,13 +40,19 @@ setInterval(() => {
 
 // التبديل بين تبويبات البحث (سطح المكتب)
 function switchTab(type) {
-  document.querySelectorAll(".hero-content .tabs button").forEach(btn => btn.classList.remove("active"));
-  if (type === 'clinic') {
-    document.querySelector(".hero-content .tabs button:first-child").classList.add("active");
+  document
+    .querySelectorAll(".hero-content .tabs button")
+    .forEach((btn) => btn.classList.remove("active"));
+  if (type === "clinic") {
+    document
+      .querySelector(".hero-content .tabs button:first-child")
+      .classList.add("active");
     document.getElementById("clinic-form").style.display = "flex";
     document.getElementById("call-form").style.display = "none";
   } else {
-    document.querySelector(".hero-content .tabs button:last-child").classList.add("active");
+    document
+      .querySelector(".hero-content .tabs button:last-child")
+      .classList.add("active");
     document.getElementById("clinic-form").style.display = "none";
     document.getElementById("call-form").style.display = "flex";
   }
@@ -55,13 +60,14 @@ function switchTab(type) {
 
 // التبديل بين تبويبات البحث (الموبايل)
 function switchMobile(type) {
-  document.querySelectorAll(".mobile-tabs .tabs button").forEach(btn => btn.classList.remove("active"));
+  document
+    .querySelectorAll(".mobile-tabs .tabs button")
+    .forEach((btn) => btn.classList.remove("active"));
   document.getElementById("mobile-clinic").style.display = "none";
   document.getElementById("mobile-medicine").style.display = "none";
   document.getElementById("mobile-call").style.display = "none";
-  document.querySelector(`.mobile-tabs .tabs button[onclick*="${type}"]`).classList.add("active");
+  document
+    .querySelector(`.mobile-tabs .tabs button[onclick*="${type}"]`)
+    .classList.add("active");
   document.getElementById("mobile-" + type).style.display = "flex";
 }
-
-
-

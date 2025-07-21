@@ -134,11 +134,16 @@
             <div class="success-check mb-3">✔️</div>
             <h5 class="text-success">لقد تم حجز ميعادك بنجاح</h5>
 
-            <div class="mt-4 text-start">
-              <div class="info-item">
-                <span class="label">اسم المريض:</span>
-                <span class="value">احمد ابراهيم</span>
-              </div>
+            <div class="info-item">
+  <span class="label">اسم المريض:</span>
+  <span class="value" id="confirmedName">--</span>
+</div>
+
+<div class="info-item">
+  <span class="label">رقم الهاتف:</span>
+  <span class="value" id="confirmedPhone">--</span>
+</div>
+
               <div class="info-item">
                 <span class="label">تاريخ الحجز:</span>
                 <span class="value">2025-08-15</span>
@@ -174,5 +179,15 @@
         </div>
       </div>
     </div>
+    <script>
+  // استرجاع البيانات من localStorage
+  const name = localStorage.getItem("patientName") || "غير محدد";
+  const phone = localStorage.getItem("patientPhone") || "غير متوفر";
+
+  // عرض البيانات في الصفحة
+  document.getElementById("confirmedName").textContent = name;
+  document.getElementById("confirmedPhone").textContent = phone;
+</script>
+
   </body>
 </html>

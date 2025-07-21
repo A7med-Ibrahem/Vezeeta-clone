@@ -177,21 +177,41 @@
 
     <script>
       function submitBooking() {
-        const name = document.getElementById("patientName").value;
-        const phone = document.getElementById("phone").value;
+        const name = document.getElementById("patientName").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
 
-        if (name.trim() === "" || phone.trim() === "") {
+        const nameRegex = /^[\u0600-\u06FFa-zA-Z\s]+$/;
+        const phoneRegex = /^[0-9]{10,15}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (name === "" || phone === "") {
           alert("من فضلك أدخل الاسم ورقم الموبايل.");
-        } else {
-          alert("تم الحجز بنجاح ✅");
-          window.location.href = "regestered-page.html"; // أو أي صفحة تأكيد
+          return;
         }
-      }
 
-      function cancelBooking() {
-        document.getElementById("patientName").value = "";
-        document.getElementById("phone").value = "";
-        document.getElementById("email").value = "";
+        if (!nameRegex.test(name)) {
+          alert("الاسم يجب أن يحتوي على حروف فقط.");
+          return;
+        }
+
+        if (!/^\d{11,}$/.test(phone)) {
+          alert("رقم الهاتف يجب أن يحتوي على 11 رقم على الأقل.");
+          return;
+        }
+
+        if (email !== "" && !emailRegex.test(email)) {
+          alert("من فضلك أدخل بريد إلكتروني صحيح.");
+          return;
+        }
+
+        // حفظ البيانات في localStorage
+        localStorage.setItem("patientName", name);
+        localStorage.setItem("patientPhone", phone);
+        localStorage.setItem("patientEmail", email);
+
+        // الانتقال لصفحة التأكيد
+        window.location.href = "regestered-page.html";
       }
     </script>
   </body>
